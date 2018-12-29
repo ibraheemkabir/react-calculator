@@ -12,3 +12,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.container {
+  text-align: center;
+  display: inline-block;
+  margin: 30px;
+  height: 700px;
+}
+
+.result {
+  padding: 4%;
+  background-color: rgb(190, 184, 184);
+  font-size: xx-large;
+}
+
+.content {
+  height: 50%;
+  width: 100%;
+}
+
+button {
+  margin: 1px;
+  width: 24.5%;
+  border-style: double;
+  height: 15%;
+}
