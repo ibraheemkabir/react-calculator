@@ -97,6 +97,7 @@ class container extends Component{
         return(
             
                 <div className='container'>
+                <p> React Calculator</p>
                     <Result  value={this.state.value} result={this.state.result} initial={this.state.initial} state={this.state.active}/>
                     <div className='content'>
                     {
