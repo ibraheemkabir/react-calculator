@@ -64,8 +64,27 @@ class container extends Component{
                     value1: value,
                     operator:e.target.value,
                 })
+            }else{
+                this.setState({
+                    active:true,
+                    value2: value,
+                    operator:e.target.value,
+                })
             }
-        }else if(e.target.value === '='){
+        }else if (e.target.value === '=' && this.state.res!==''){
+            let values=this.state.value;
+            let valus=this.state.result;
+            let res = this.operation(this.state.operator,this.state.value1,values)
+            this.setState({
+                active:false,
+                result:res,
+                value2: valus,
+                value1: res,
+                value: res
+            })
+            
+        }
+        else if(e.target.value === '='){
             let values=this.state.value;
             let valus=this.state.result;
             let res = this.operation(this.state.operator,this.state.value1.join(''),values.join(''))
@@ -73,10 +92,10 @@ class container extends Component{
                 active:false,
                 result:res,
                 value2: valus,
-                value1: values,
+                value1: res,
                 value: res
             })
-            this.reset()
+            
         }else{
             this.reset()
             this.setState({
